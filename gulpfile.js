@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 // Sass
 
 gulp.task('sass', function () {
-    gulp.src('src/scss/**/*.scss')
+    gulp.src('src/scss/index.scss')
         .pipe(sass({errLogToConsole: true})) // Keep running gulp even though occurred compile error
         .pipe(pleeease({
             autoprefixer: {
