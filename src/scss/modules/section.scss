@@ -1,4 +1,4 @@
-section.first {
+section {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -10,4 +10,5 @@ section.first {
 	max-width: 600px;
 	padding: 10% 0 0 0;
 	box-sizing: border-box;
+	display: none;
 }

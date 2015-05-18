@@ -1,0 +1,23 @@
+.about-photo-wrapper {
+	width: 150px;
+	border-radius: 50%;
+	height: 150px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	.about-photo {
+           max-height: 100%;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           -webkit-transform: translate(-50%,-50%);
+           -ms-transform: translate(-50%,-50%);
+           transform: translate(-50%,-50%);
+	}	
+}
+
+.about-text {
+	color: $primary-color;
+	font-size: 1.1em;
+	line-height: 1.6em;
+}

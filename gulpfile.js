@@ -14,7 +14,7 @@ gulp.task('sass', function () {
         .pipe(sass({errLogToConsole: true})) // Keep running gulp even though occurred compile error
         .pipe(pleeease({
             autoprefixer: {
-                browsers: ['last 2 versions']
+                browsers: ['> 0.5%']
             }
         }))
         .pipe(gulp.dest('dist/css'))
@@ -34,9 +34,9 @@ gulp.task('js', function() {
 // Imagemin
 
 gulp.task('imagemin', function() {
-    gulp.src(['src/img/**/*.{png,jpg,gif,svg}'])
+    gulp.src(['src/img/*.{png,jpg,gif,svg}'])
         .pipe(imagemin({optimizationLevel: 7}))
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('dist/img'));
 });
 
 // Static server
