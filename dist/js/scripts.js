@@ -1,1 +1,1 @@
-!function(e){e("nav a").click(function(){var s=e(this).text();e("section").removeClass("is-selected"),e("."+s).addClass("is-selected")})}(jQuery);
+!function(e){e("nav a").click(function(){var s=e(this).text();return e("section").removeClass("is-selected"),e("."+s).addClass("is-selected"),!1})}(jQuery);

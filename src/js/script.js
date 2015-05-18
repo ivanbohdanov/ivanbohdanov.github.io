@@ -7,7 +7,8 @@
 		var linkName = $(this).text();
 		$('section').removeClass('is-selected');
 		$('.' + linkName).addClass('is-selected');
-	})
+		return false;
+	});
 	
 	
 })(jQuery);
