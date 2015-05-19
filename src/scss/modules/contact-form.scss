@@ -1,0 +1,63 @@
+form {
+	margin: 50px 0 0;
+	.input-wrapper {
+		position: relative;
+		height: 50px;
+		width: 400px;
+		margin: auto;
+		input,textarea {
+			display: block;
+			color: $primary-color;
+			line-height: 35px;
+			height: 35px;
+			width: 100%;
+			margin: auto;
+			text-indent: 10px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			z-index: 2;
+			background: transparent;
+			border: 1px solid $secondary-color;
+			color: $secondary-color;
+			outline: none;
+			box-sizing: border-box;
+			&:focus, &.focus {
+				border-color: $primary-color;
+				color: $primary-color;
+			}
+			&:focus + label, &.focus + label {
+				margin-left: -80px;
+				color: $primary-color;
+			}
+		}
+		label {
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			line-height: 50px;
+			height: 100%;
+			margin-left: 10px;
+			transition: .2s linear;
+			color: $secondary-color;
+		}
+		&.text {
+			height: 200px;
+			textarea {
+				width: 100%;
+				height: 100%;
+				resize: none;
+				line-height: 30px;
+			}
+		}
+	}
+	input[type='submit'] {
+		display: block;
+		width: 150px;
+		border: 1px solid $secondary-color;
+		background: transparent;
+		color: $secondary-color;
+		height: 40px;
+		margin: 15px auto;
+	}
+}

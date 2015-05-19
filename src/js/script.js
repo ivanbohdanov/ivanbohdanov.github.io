@@ -10,5 +10,11 @@
 		return false;
 	});
 	
+	$('.input-wrapper input, .input-wrapper textarea').focusout(function () {
+		$(this).removeClass('focus');
+		if($(this).val().length > 0) {
+			$(this).addClass('focus');
+		}
+	});
 	
 })(jQuery);
