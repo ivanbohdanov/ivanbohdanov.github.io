@@ -59,5 +59,14 @@ form {
 		color: $secondary-color;
 		height: 40px;
 		margin: 15px auto;
+		outline: 0;
+		&.focus {
+			border-color: $primary-color;
+			color: $primary-color;
+		}
+		&:hover {
+			border-color: #3ac;
+			color: #3ac;
+		}
 	}
 }
