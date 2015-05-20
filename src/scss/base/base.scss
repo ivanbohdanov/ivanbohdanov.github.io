@@ -12,10 +12,8 @@ a {
 	}
 	&:hover {
 		color: $link-color-hover;
-		text-decoration: underline;
 	}
 	&:focus {
 		outline: 0;
-		color: $link-color-hover;
 	}
 }
