@@ -8,11 +8,13 @@
 		//
 		var that = this;
 		if (!$('body').hasClass('active')) {
-			$('section.first').hide(500);
+			$('section.first').fadeOut(300);
+			$('header').fadeOut(0);
 			setTimeout(function () {
 				var linkName = $(that).text();
 				$('section').removeClass('is-selected');
 				$('.' + linkName).addClass('is-selected');
+				$('header').fadeIn(200);
 			}, 500);
 			$('body').addClass('active');
 		} else {
