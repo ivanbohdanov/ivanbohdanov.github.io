@@ -18,9 +18,11 @@
 			}, 500);
 			$('body').addClass('active');
 		} else {
-			var linkName = $(that).text();
-			$('section').removeClass('is-selected');
-			$('.' + linkName).addClass('is-selected');
+			setTimeout(function() {
+				var linkName = $(that).text();
+				$('section').removeClass('is-selected').fadeOut(0);
+				$('.' + linkName).addClass('is-selected').fadeOut(0).fadeIn(200);
+			}, 200);
 		}
 		
 		return false;
