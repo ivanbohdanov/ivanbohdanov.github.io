@@ -22,7 +22,7 @@ section.work {
 				filter: grayscale(1);
 				transition: .3s linear;
 				transform: translateZ(0);
-				box-shadow: 0 0 4px 1px black;
+				box-shadow: 0 0 2px 0px black;
 				height: 100%;
 				width: 100%;
 				img {
@@ -70,6 +70,38 @@ section.work {
 						bottom: 0;
 					}
 				}
+			}
+		}
+	}
+	@media (max-width: 1100px) and (min-width: 700px) {
+		//2 columns for work portfolio
+		ul {
+			justify-content: space-around;
+			li {
+				margin: 0 0 30px;
+				&:nth-child(n+3) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	@media (max-width: 700px) {
+		//1 columns for work portfolio
+		ul {
+			justify-content: space-around;
+			li {
+				margin: 0 0 20px;
+			}
+		}
+	}
+	@media (max-width: 400px) {
+		//1 columns for work portfolio
+		ul {
+			justify-content: space-around;
+			li {
+				margin: 0 0 20px;
+				width: 250px;
+				height: 200px;
 			}
 		}
 	}
