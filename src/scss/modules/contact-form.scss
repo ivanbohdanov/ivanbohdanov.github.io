@@ -80,6 +80,36 @@ form {
 		margin: 0;
 		.input-wrapper {
 			width: 250px;
+			transition: .2s linear;
+			&.focus {
+				height: 70px;	
+				label {
+					line-height: 70px;
+				}
+			}
+			input,textarea {
+				&:focus, &.focus {
+					border-color: $primary-color;
+					color: $primary-color;
+				}
+				&:focus + label, &.focus + label {
+					margin-top: -30px;
+					margin-left: 10px;
+					color: $primary-color;
+				}
+			}
+			&.text {
+				margin-top: 20px;
+				&.focus {
+					height: 200px;
+				}
+				textarea {
+					line-height: 30px;
+				}
+				label {
+					line-height: 30px;
+				}
+			}
 		}
 	}
 }

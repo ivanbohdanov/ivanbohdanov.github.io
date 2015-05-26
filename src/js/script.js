@@ -33,12 +33,17 @@
 	
 	$('.input-wrapper input, .input-wrapper textarea').focusout(function () {
 		$(this).removeClass('focus');
+		$(this).closest('.input-wrapper').removeClass('focus');
 		if ($(this).val().length > 0) {
 			$(this).addClass('focus');
+			$(this).closest('.input-wrapper').addClass('focus');
 		}
 		if ( $('input[type="text"]').hasClass('focus') && $('input[type="email"]').hasClass('focus') && $('textarea').hasClass('focus')) {
 			$('input[type="submit"]').addClass('focus').removeAttr('disabled');
 		}
+	});
+	$('.input-wrapper input, .input-wrapper textarea').focusin(function () {
+		$(this).closest('.input-wrapper').addClass('focus');
 	});
 	
 })(jQuery);
