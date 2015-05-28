@@ -1,5 +1,5 @@
 form {
-	margin: 50px 0 0;
+	margin: 30px 0 0;
 	.input-wrapper {
 		position: relative;
 		height: 50px;
@@ -67,6 +67,12 @@ form {
 		&:hover {
 			border-color: black;
 			color: black;
+		}
+	}
+	input[disabled] {
+		&:hover {
+			color: $secondary-color;
+			border-color: $secondary-color;
 		}
 	}
 	@media (max-width: 700px) and (min-width: 500px) {
