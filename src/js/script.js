@@ -42,18 +42,22 @@
 		return false;
 	});
 	
-	$('.input-wrapper input, .input-wrapper textarea').focusout(function () {
-		$(this).removeClass('focus');
-		$(this).closest('.input-wrapper').removeClass('focus');
+	$('.input-wrapper input, .input-wrapper textarea').keyup(function () {
 		if ($(this).val().length > 0) {
 			$(this).addClass('focus');
 			$(this).closest('.input-wrapper').addClass('focus');
+		} else {
+			$(this).removeClass('focus');
+			$(this).closest('.input-wrapper').removeClass('focus');
 		}
+		
 		if ( $('input[type="text"]').hasClass('focus') && $('input[type="email"]').hasClass('focus') && $('textarea').hasClass('focus')) {
 			$('input[type="submit"]').addClass('focus').removeAttr('disabled');
+		} else {
+			$('input[type="submit"]').removeClass('focus').attr('disabled');
 		}
-	});
-	$('.input-wrapper input, .input-wrapper textarea').focusin(function () {
+	})
+	.focusin(function () {
 		$(this).closest('.input-wrapper').addClass('focus');
 	});
 	
