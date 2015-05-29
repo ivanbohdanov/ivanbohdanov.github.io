@@ -1,5 +1,16 @@
 (function($, undefined){
 	
+	$('h1').click (function () {
+		$('section.first').fadeOut(300);
+		$('header').fadeOut(0);
+		setTimeout(function() {	
+			$('nav a[href="#about"]').addClass('is-selected');
+			$('.about').addClass('is-selected');
+			$('header').fadeIn(200);
+		}, 500);
+		$('body').addClass('active');
+		return false;
+	});
 	
 	$('nav a').click(function () {
 		

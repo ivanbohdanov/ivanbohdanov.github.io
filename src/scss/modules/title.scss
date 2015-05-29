@@ -7,7 +7,9 @@ h1 {
 	top: 30%;
 	color: $primary-color;
 	@include no-select;
-	cursor: default;
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
 	span {
 		font-size: .5em;
 	}
