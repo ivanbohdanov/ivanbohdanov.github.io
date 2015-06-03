@@ -1,5 +1,20 @@
 (function($, undefined){
 	
+	
+
+	var pattern = Trianglify({
+	  	height: 1000,
+	  	width: 1000,
+  		cell_size: 50
+	}),
+	  	canvas = $('canvas'),
+		canvasWrapper = $('.canvas-wrapper'),
+		height = $(document).height(),
+		width = $(document).width();
+
+	$('.canvas-wrapper').append(pattern.canvas());
+	canvasWrapper.height(height).width(width);
+	
 	$('h1').click (function () {
 		$('section.first').fadeOut(300);
 		$('header').fadeOut(0);
