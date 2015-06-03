@@ -1,19 +1,28 @@
 (function($, undefined){
 	
 	
-
+//trianglify function options
 	var pattern = Trianglify({
 	  	height: 1000,
 	  	width: 1000,
-  		cell_size: 50
+  		cell_size: 50,
+		x_colors: ['#ffffff', '#acacac', '#FFFFFF'],
+		y_colors: 'match_x'
 	}),
-	  	canvas = $('canvas'),
 		canvasWrapper = $('.canvas-wrapper'),
 		height = $(document).height(),
 		width = $(document).width();
 
 	$('.canvas-wrapper').append(pattern.canvas());
 	canvasWrapper.height(height).width(width);
+	
+	
+	var timeout = 300;
+	setTimeout(function() {
+		$('body, html').animate({'opacity': 1}, timeout);
+	}, timeout);
+	
+	
 	
 	$('h1').click (function () {
 		$('section.first').fadeOut(300);
