@@ -6,6 +6,7 @@
 	  	height: 1000,
 	  	width: 1000,
   		cell_size: 50,
+  		stroke_width: 'random',
 		x_colors: ['#aaa', '#ccc', '#aaa'],
 		y_colors: 'match_x'
 	}),
@@ -18,6 +19,7 @@
 	canvasInner.append(pattern.canvas());
 	canvasWrapper.height(height).width(width);
 	
+//	appearance of body 
 	
 	var timeout = 300;
 	setTimeout(function() {
@@ -25,6 +27,8 @@
 	}, timeout);
 	
 	canvas.css('transform', 'translate(-50%,-50%)');
+	
+//	paralax effect for background
 	
 	$(document).mousemove(function (e) {
 		var x = e.pageX,
@@ -34,11 +38,9 @@
 			dY = ((y + 1) / height) * 100 * ratio;
 			console.log(dY);
 			console.log(dX);
-//			canvas.css();
 			canvasInner.css({
 				'transform' : 'translate(-'+ (33 + Number(dX)) +'%,-'+ (33 + Number(dY)) +'%)'
-//				top : dY + "%",
-//				left : dX + "%"
+
 			});
 			
 	});
