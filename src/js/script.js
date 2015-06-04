@@ -19,6 +19,8 @@
 	canvasInner.append(pattern.canvas());
 	canvasWrapper.height(height).width(width);
 	$(window).resize(function () {
+		height = $(document).height(),
+		width = $(document).width();
 		canvasWrapper.height(height).width(width);
 	});
 	
