@@ -18,6 +18,9 @@
 
 	canvasInner.append(pattern.canvas());
 	canvasWrapper.height(height).width(width);
+	$(window).resize(function () {
+		canvasWrapper.height(height).width(width);
+	});
 	
 //	appearance of body 
 	
