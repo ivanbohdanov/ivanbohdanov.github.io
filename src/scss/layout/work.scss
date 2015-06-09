@@ -30,6 +30,7 @@ section.work {
 					top: 50%;
 					left: 50%;
 					transform: translate3d(-50%, -50%, 0) scale(1.2);
+					-ms-transform: translate3d(-50%, -50%, 0) scale(1.2);
 					min-width: 100%;
 					min-height: 100%;
 					max-height: 120%;
@@ -64,6 +65,7 @@ section.work {
 				&:hover {
 					img {
 						transform: translate3d(-50%, -50%, 0) scale(1);
+						-ms-transform: translate3d(-50%, -50%, 0) scale(1);
 					}
 					filter: grayscale(0);
 					div {
