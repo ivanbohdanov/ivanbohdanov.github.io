@@ -7,7 +7,7 @@
 	  	width: 1000,
   		cell_size: 50,
   		stroke_width: 'random',
-		x_colors: ['#aaa', '#ccc', '#aaa'],
+		x_colors: ['#444', '#ccc', '#444'],
 		y_colors: 'match_x'
 	}),
 		canvasWrapper = $('.canvas-wrapper'),
@@ -38,13 +38,13 @@
 	$(document).mousemove(function (e) {
 		var x = e.pageX,
 			y = e.pageY,
-			ratio = 0.25,
+			ratio = 0.1,
 			dX = ((x + 1) / width) * 100 * ratio,
 			dY = ((y + 1) / height) * 100 * ratio;
 			console.log(dY);
 			console.log(dX);
 			canvasInner.css({
-				'transform' : 'translate(-'+ (33 + Number(dX)) +'%,-'+ (33 + Number(dY)) +'%)'
+				'transform' : 'translate(-'+ (45 + Number(dX)) +'%,-'+ (45 + Number(dY)) +'%)'
 
 			});
 			
