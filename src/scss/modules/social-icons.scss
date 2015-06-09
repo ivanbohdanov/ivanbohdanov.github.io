@@ -18,7 +18,7 @@
 }
 
 .soc {
-    width: 260px;
+    width: 240px;
     margin: 30px auto 0;
     overflow:hidden;
     padding:0;
@@ -59,21 +59,21 @@
     display:block;
     position: relative;
     z-index: 1;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    font-size: 19px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
     margin-right: 35px;
     color: lighten($secondary-color, 30%);
-    background-color: $secondary-color;
+    background-color: $primary-color;
 }
 
 .soc a:hover {
     z-index: 2;
-    color: $primary-color;
+    color: $secondary-color;
 }
 
 .soc-icon-last{

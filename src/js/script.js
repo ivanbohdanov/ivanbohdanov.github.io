@@ -38,16 +38,13 @@
 	$(document).mousemove(function (e) {
 		var x = e.pageX,
 			y = e.pageY,
-			ratio = 0.1,
-			dX = ((x + 1) / width) * 100 * ratio,
-			dY = ((y + 1) / height) * 100 * ratio;
-			console.log(dY);
-			console.log(dX);
+			ratioX = 0.1,
+			ratioY = 0.05,
+			dX = ((x + 1) / width) * 100 * ratioX,
+			dY = ((y + 1) / height) * 100 * ratioY;
 			canvasInner.css({
-				'transform' : 'translate(-'+ (45 + Number(dX)) +'%,-'+ (45 + Number(dY)) +'%)'
-
+				'transform' : 'translate(-'+ (45 + Number(dX)) +'%,-'+ (48 + Number(dY)) +'%)'
 			});
-			
 	});
 	
 	
