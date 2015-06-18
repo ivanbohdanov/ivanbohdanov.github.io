@@ -78,14 +78,12 @@ form {
 		}
 	}
 	@media (max-width: 700px) and (min-width: 500px) {
-		margin: 0;
 		.input-wrapper {
 			width: 350px;
 		}
 		
 	}
 	@media (max-width: 500px) {
-		margin: 0;
 		.input-wrapper {
 			width: 250px;
 			transition: .2s linear;
