@@ -7,4 +7,16 @@ h3 {
 
 p.contact-text {
 	text-align: center;
+	width: 320px;
+	margin: 1em auto;
+	height: 24px;
+	a {
+		float: left;
+	}
+	span {
+		float: left;
+		display: block;
+		width: 100px;
+		text-align: left;
+	}
 }

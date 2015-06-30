@@ -1,6 +1,6 @@
 (function($, undefined){
-	
-	
+
+
 //trianglify function options
 	var pattern = Trianglify({
 	  	height: 1000,
@@ -23,18 +23,18 @@
 		width = $(document).width();
 		canvasWrapper.height(height).width(width);
 	});
-	
-//	appearance of body 
-	
+
+//	appearance of body
+
 	var timeout = 300;
 	setTimeout(function() {
 		$('body, html').animate({'opacity': 1}, timeout);
 	}, timeout);
-	
+
 	canvas.css('transform', 'translate(-50%,-50%)');
-	
+
 //	paralax effect for background
-	
+
 	$(document).mousemove(function (e) {
 		var x = e.pageX,
 			y = e.pageY,
@@ -46,12 +46,12 @@
 				'transform' : 'translate(-'+ (45 + Number(dX)) +'%,-'+ (48 + Number(dY)) +'%)'
 			});
 	});
-	
-	
+
+
 	$('h1').click (function () {
 		$('section.first').fadeOut(300);
 		$('header').fadeOut(0);
-		setTimeout(function() {	
+		setTimeout(function() {
 			$('nav a[href="#about"]').addClass('is-selected');
 			$('.about').addClass('is-selected');
 			$('header').fadeIn(200);
@@ -59,10 +59,10 @@
 		$('body').addClass('active');
 		return false;
 	});
-	
+
 	$('nav a').click(function () {
-		
-		
+
+
 		//add class to section tag for appearance of needs block
 		//
 		var that = this;
@@ -86,27 +86,27 @@
 				$('.' + linkName).addClass('is-selected').fadeOut(0).fadeIn(200);
 			}, 200);
 		}
-		
+
 		return false;
 	});
 	
-	$('.input-wrapper input, .input-wrapper textarea').keyup(function () {
-		if ($(this).val().length > 0) {
-			$(this).addClass('focus');
-			$(this).closest('.input-wrapper').addClass('focus');
-		} else {
-			$(this).removeClass('focus');
-			$(this).closest('.input-wrapper').removeClass('focus');
-		}
-		
-		if ( $('input[type="text"]').hasClass('focus') && $('input[type="email"]').hasClass('focus') && $('textarea').hasClass('focus')) {
-			$('input[type="submit"]').addClass('focus').removeAttr('disabled');
-		} else {
-			$('input[type="submit"]').removeClass('focus').attr('disabled');
-		}
-	})
-	.focusin(function () {
-		$(this).closest('.input-wrapper').addClass('focus');
-	});
-	
+	// $('.input-wrapper input, .input-wrapper textarea').keyup(function () {
+	// 	if ($(this).val().length > 0) {
+	// 		$(this).addClass('focus');
+	// 		$(this).closest('.input-wrapper').addClass('focus');
+	// 	} else {
+	// 		$(this).removeClass('focus');
+	// 		$(this).closest('.input-wrapper').removeClass('focus');
+	// 	}
+	//
+	// 	if ( $('input[type="text"]').hasClass('focus') && $('input[type="email"]').hasClass('focus') && $('textarea').hasClass('focus')) {
+	// 		$('input[type="submit"]').addClass('focus').removeAttr('disabled');
+	// 	} else {
+	// 		$('input[type="submit"]').removeClass('focus').attr('disabled');
+	// 	}
+	// })
+	// .focusin(function () {
+	// 	$(this).closest('.input-wrapper').addClass('focus');
+	// });
+
 })(jQuery);
