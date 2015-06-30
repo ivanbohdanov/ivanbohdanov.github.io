@@ -19,6 +19,9 @@ p.contact-text {
 		width: 100px;
 		text-align: left;
 	}
+	&.smaller {
+		width: 300px;
+	}
 	@media (max-width: 400px) {
 		width: 320px;
 	}
