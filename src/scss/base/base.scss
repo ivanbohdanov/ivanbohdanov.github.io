@@ -7,17 +7,3 @@ body,html {
 	-moz-osx-font-smoothing: grayscale;
 	opacity: 0;
 }
-
-a {
-	color: $link-color;
-	text-decoration: none;
-	&:visited {
-		color: $link-color;
-	}
-	&:hover {
-		color: $link-color-hover;
-	}
-	&:focus {
-		outline: 0;
-	}
-}
