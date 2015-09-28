@@ -2,7 +2,9 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	pleeease = require('gulp-pleeease'),
 	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify'),
+    htmlmin = require('gulp-htmlmin'),
+	plumber = require('gulp-plumber'),
 	imagemin = require('gulp-imagemin'),
 	browserSync = require('browser-sync'),
 	reload      = browserSync.reload;
@@ -25,10 +27,19 @@ gulp.task('sass', function () {
 
 gulp.task('js', function() {
     gulp.src(['src/js/*.js'])
+        .pipe(plumber()) //Keep running gulp even though occurred compile error for js
         .pipe(concat('scripts.js'))
         .pipe(uglify({preserveComments: 'some'})) // Keep some comments
         .pipe(gulp.dest('dist/js'))
         .pipe(reload({stream:true}));
+});
+
+//HTML minifier
+
+gulp.task('htmlmin', function() {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./'))
 });
 
 // Imagemin
@@ -61,5 +72,6 @@ gulp.task('default',['browser-sync'], function() {
     gulp.watch('src/scss/**/*.scss',['sass']);
     gulp.watch('src/js/*.js',['js']);
     gulp.watch('src/img/**/*.{png,jpg,gif,svg}',['imagemin']);
-    gulp.watch("*.html", ['bs-reload']);
+    gulp.watch("src/*.html", ['htmlmin']);
+    gulp.watch("*.html", ['bs-reload', 'htmlmin']);
 });
