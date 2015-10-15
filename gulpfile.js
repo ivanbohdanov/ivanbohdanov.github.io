@@ -41,6 +41,16 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('dist/img'));
 });
 
+// Static server
+
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+      baseDir: "./"
+    }
+  });
+});
+
 // Reload all browsers
 
 gulp.task('bs-reload', function () {
