@@ -21,30 +21,18 @@
 </head>
 <body>
   1)
-<!--<div>
-<video id="first" controls="false" data-setup='{
-        "controls": false,
-        "loop": "true",
-        "autoplay": false, 
-        "preload": "true"}'>
-        <source src="video.webm" type='video/webm' /></video>
-</div>
+
 2)
 <div>
-<video id="second" controls="false" data-setup='{
-        "controls": false,
-        "loop": "true",
-        "autoplay": false, 
-        "preload": "true"}'>
-        <source src="video.webm" type='video/webm' /></video>
-</div>-->
-3)
-<div>
-<video id="third" data-setup='{"controls": false, "autoplay": false}'>
+<video id="myMovie">
         <source src="video.webm" type='video/webm' /></video>
 </div>
+3)
+<div>
+<video id="third" data-setup='{"controls": false, "autoplay": false}'></video>
+</div>
 
-
+<input type="button" id="test" value="Play" onclick="videojs('myMovie').play()">
   
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

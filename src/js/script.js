@@ -7,9 +7,11 @@ $(document).ready(function () {
   // $(document).on('load', function () {
   //   secondVideo.play()
   // });
-
-  videojs('third').ready(function() {
-    var that = this;
-      that.play();
-  });
+  
+  videojs('third').src("/video.mov").ready(function () {
+      this.play();
+  })
+  setTimeout(function () {
+    $('#test').click();
+  }, 2000)
 })
