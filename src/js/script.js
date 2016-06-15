@@ -1,14 +1,15 @@
 $(document).ready(function () {
-  var firstVideo = videojs('first');
-  var secondVideo = videojs('second');
+  // var firstVideo = videojs('first');
+  // var secondVideo = videojs('second');
 
-  firstVideo.play()
+  // firstVideo.play()
 
-  $(document).on('load', function () {
-    secondVideo.play()
-  });
+  // $(document).on('load', function () {
+  //   secondVideo.play()
+  // });
 
   videojs('third').ready(function() {
-    this.play();
+    var that = this;
+      that.play();
   });
 })
