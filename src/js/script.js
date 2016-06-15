@@ -12,6 +12,6 @@ $(document).ready(function () {
       this.play();
   })
   setTimeout(function () {
-    $('#test').click();
+    $('#test').trigger( "click" )
   }, 2000)
 })
