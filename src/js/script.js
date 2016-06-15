@@ -22,7 +22,11 @@ $(document).ready(function () {
       this.play();
   })
   setTimeout(function () {
-    triggerClick($('#test').get()[0])
+    var link = document.getElementById( 'test' ),
+    event = document.createEvent( 'HTMLEvents' );
+
+    event.initEvent( 'click', true, true );
+    link.dispatchEvent( event );
   }, 2000)
 
 })
