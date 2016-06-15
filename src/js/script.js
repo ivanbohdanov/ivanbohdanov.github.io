@@ -1,7 +1,6 @@
 $(document).ready(function () {
   var firstVideo = videojs('first');
   var secondVideo = videojs('second');
-  var thirdVideo = videojs('third');
 
   firstVideo.play()
 
@@ -9,7 +8,7 @@ $(document).ready(function () {
     secondVideo.play()
   });
 
-  setTimeout(function () {
-    thirdVideo.play();
-  }, 1500)
+  videojs('third').ready(function() {
+    this.play();
+  });
 })
