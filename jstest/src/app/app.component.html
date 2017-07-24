@@ -1,0 +1,28 @@
+<div>
+  <h3>Please set your name</h3>
+  <input [(ngModel)]="userName" type="text">
+</div>
+
+
+<div *ngFor="let question of questions">
+  <h3>{{ question.questionName}}</h3>
+  <p>{{ question.questionDescription}}</p>
+  <div *ngIf="question.questionType === 'checkbox'">
+    <div *ngFor="let option of question.options; let i = index">
+      <input [id]="question.questionName + i" type="checkbox"><label [for]="question.questionName + i">{{option}}</label>
+    </div>
+  </div>
+  <div *ngIf="question.questionType === 'radio'">
+    <div *ngFor="let option of question.options; let i = index">
+      <input [id]="question.questionName + i" [name]="question.questionName" type="radio"><label [for]="question.questionName + i">{{option}}</label>
+    </div>
+  </div>
+  <textarea *ngIf="question.questionType === 'text'"></textarea>
+  <pre>
+    <code>
+      var questions = Questions;
+    </code>
+  </pre>
+</div>
+
+<span (click)="downloadFile()">test</span>
