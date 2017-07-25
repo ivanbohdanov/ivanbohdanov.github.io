@@ -18,7 +18,7 @@ export class AppComponent {
     this.window.initHighlightingOnLoad();
   }
 
-  downloadFile(data: Response) {
+  downloadFile() {
     let parsedResponse = 'test';
     let blob = new Blob([parsedResponse], { type: 'text/csv' });
     let url = window.URL.createObjectURL(blob);
