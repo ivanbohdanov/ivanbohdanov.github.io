@@ -19,7 +19,7 @@ export class AppComponent {
   }
 
   downloadFile() {
-    let parsedResponse = 'test';
+    let parsedResponse = JSON.stringify(this.questions);
     let blob = new Blob([parsedResponse], { type: 'text/csv' });
     let url = window.URL.createObjectURL(blob);
 
