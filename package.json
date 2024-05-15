@@ -1,0 +1,35 @@
+{
+    "name": "ivanbohdanov.github.io",
+    "version": "0.0.1",
+    "description": "Ivan Bohdanov personal website",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vite --host --open",
+        "lint": "eslint --ext .js ./",
+        "lint:fix": "eslint --fix --ext .js ./",
+        "build": "vite build",
+        "preview": "vite preview --open",
+        "buildpreview": "vite build && vite preview --open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ivanbohdanov/ivanbohdanov.github.io.git"
+    },
+    "devDependencies": {
+        "vite": "5.2.11",
+        "vite-plugin-eslint": "1.8.1",
+        "eslint": "9.2.0",
+        "unplugin-icons": "0.19.0",
+        "@iconify-json/cib": "1.1.8"
+    },
+    "dependencies": {
+        "the-new-css-reset": "1.11.2"
+    },
+    "author": "Ivan Bohdanov",
+    "type": "module",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ivanbohdanov/ivanbohdanov.github.io/issues"
+    },
+    "homepage": "https://github.com/ivanbohdanov/ivanbohdanov.github.io#readme"
+}
