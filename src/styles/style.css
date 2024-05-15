@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,13 +25,13 @@ main {
         margin-bottom: .5rem;
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-bottom: 2rem;
     }
 
     .social {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
     }
 }
@@ -42,7 +42,7 @@ main {
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
     color: #666;
 }
