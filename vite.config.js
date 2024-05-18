@@ -1,18 +1,18 @@
-import { defineConfig } from "vite";
-import eslint from "vite-plugin-eslint";
+import { defineConfig } from 'vite'
+import eslint from 'vite-plugin-eslint'
 import Icons from 'unplugin-icons/vite'
 
 export default defineConfig({
-    publicDir: "public",
-    root: "./",
+    publicDir: 'public',
+    root: './',
     build: {
-        outDir: "dist",
+        outDir: 'dist',
     },
     plugins: [
         eslint({
             cache: false,
             fix: true,
         }),
-        Icons({compiler: "raw"}),
+        Icons({ compiler: 'raw' }),
     ],
-});
+})

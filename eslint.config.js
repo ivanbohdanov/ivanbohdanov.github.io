@@ -1,9 +1,25 @@
-// eslint.config.js
-export default [
+import antfu from '@antfu/eslint-config'
+
+export default antfu(
     {
-        files: ["src/**/*.js"],
+        stylistic: {
+            indent: 4,
+            quotes: 'single',
+        },
+        ignores: ['.github', 'dist', 'node_modules'],
+    },
+    {
         rules: {
-            semi: "error"
-        }
-    }
-];
+            'style/brace-style': ['error', '1tbs'],
+            'style/arrow-parens': ['error', 'always'],
+            'curly': ['error', 'all'],
+            'antfu/consistent-list-newline': 'off',
+        },
+    },
+    {
+        files: ['package.json'],
+        rules: {
+            'style/eol-last': 'off',
+        },
+    },
+)
